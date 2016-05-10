@@ -157,7 +157,7 @@ public class TestMoveBlock : MonoBehaviour {
     }
     void OnTriggerStay(Collider other)
     {
-        if (other.tag.Equals("BLOCK") || other.tag.Equals("WALL"))
+        if (other.tag.Equals("BLOCK") || other.tag.Equals("WALL") || other.tag.Equals("Player"))
         {
             bCollison = true;
             bPick = false;
@@ -165,7 +165,10 @@ public class TestMoveBlock : MonoBehaviour {
 
         if(other.tag.Equals("GOAL"))
         {
-            _Manager.bGameOver = true;
+            if (gameObject.tag.Equals("Player"))
+                _Manager.bGameOver = true;
+            bCollison = true;
+            bPick = false;
         }
         //Debug.Log(other.name + " : " + Time.time);
     }
