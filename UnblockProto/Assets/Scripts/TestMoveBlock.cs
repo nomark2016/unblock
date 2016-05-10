@@ -166,11 +166,21 @@ public class TestMoveBlock : MonoBehaviour {
         if(other.tag.Equals("GOAL"))
         {
             if (gameObject.tag.Equals("Player"))
+            {
                 _Manager.bGameOver = true;
+                Invoke("GameEnd", 1);
+            }
             bCollison = true;
             bPick = false;
+
+            
         }
         //Debug.Log(other.name + " : " + Time.time);
+    }
+
+    void GameEnd()
+    {
+        Application.LoadLevel(0);
     }
 
 }

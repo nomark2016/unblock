@@ -186,6 +186,7 @@
      <Compile Include="Assets\Scripts\ClassDefine.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\TestMoveBlock.cs" />
+     <Compile Include="Assets\Scripts\TitleManager.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.9.8.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Masked 1.shader" />
